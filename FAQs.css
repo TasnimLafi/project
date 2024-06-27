@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+nav{
+    background-color: transparent;
+    color:white;
+    width:100%;
+    height:70px;
+    padding-left: 40px;;
+    display: flex;
+    justify-content: space-around;
+    position:fixed;
+    z-index: 99;
+    transition: all 0.7s ease-in-out;
+
+}
+.shadow{
+    background-color: rgb(20, 103, 246);
+}
+nav .nav_elem{
+    padding-top: 20px;
+    background-color: transparent;
+    width:60%;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+#logo{
+    margin-top: -36px;
+    width:13%;
+    height:200%;
+}
+.nav_elem img{
+    width:20%;
+    height:100px;
+}
+.nav_elem a{
+    text-decoration: none;
+    color:white;
+}
+.search_img{
+    width:25px;
+    position:absolute;
+    top:25px;
+    left:12px;
+    filter: brightness(0) saturate(100%) invert(9%) sepia(86%) saturate(3078%) hue-rotate(224deg) brightness(81%) contrast(106%);
+
+}
+.search{
+    padding-top:15px;
+    background-color: transparent;
+    width:30%;
+    align-items: center;
+    position:relative;
+}
+.input_search{
+    background-color: rgb(255, 255, 255);
+    padding:20px;
+    padding-left: 50px;
+    width:70%;
+    height:30px;
+    font-weight: 500;
+    color:#02195f;
+    border-radius: 50px;
+    border:none;
+    outline: none;
+}
+#FAQs-bg{
+    width:80%;
+    height:200px;
+    margin: 0 auto;
+}
+#FAQs-bg img{
+    width:100%;
+    overflow: hidden;
+}
+#title-FAQ{
+    position:absolute;
+    color:white;
+    font-size: 90px;
+    top:300px;
+    left:600px;
+    text-shadow: -1px -1px 8px rgba(0,0,0,0.3);
+}
+.cards{
+    position:absolute;
+    top:770px;
+    left:70px;
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap:30px ;
+    padding:30px 0;
+    background-color: rgb(232, 232, 232);
+}
+.FAQs-card{
+    background-color: rgb(255, 255, 255);
+    width:80%;
+    padding:20px;
+    border-bottom: solid 2px black;
+}
+.question{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.question ion-icon{
+    font-size: 40px;
+    transition: all 1s ease;
+}
+.FAQs-card p{
+    font-size: 20px ;
+    padding: 20px 40px;
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition:all 1.4s ease;
+}
+.FAQs-card.active .answer{
+    max-height: 300px;
+}
+.FAQs-card.active ion-icon{
+    transform: rotate(180deg);
+}
+footer{
+    margin-top: 2050px;
+    position:relative;
+    width:100%;
+    background: #3586ff;
+    min-height:100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.social_icon ,.policy-section{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px 0;
+    flex-wrap: wrap;
+}
+.social_icon li,.policy-section li{
+    list-style: none;
+}
+.social_icon li a {
+    color: white;
+    font-size: 2em;
+    margin:0 10px;
+    display:inline-block;
+    transition: 0.5s;
+}
+.policy-section li a{
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin:10px 10px;
+    display:inline-block;
+    transition: 0.5s;
+    opacity:0.7;
+}
+.policy-section li a:hover{
+    opacity:1;
+}
+
+.social_icon li a:hover{
+    transform: translateY(-10px);
+}
+footer p{
+    color:white;
+    font-weight: 400;
+}
+.wave{
+    position:absolute;
+    top:-100px;
+    left:0;
+    width:100%;
+    height:100px;
+    background:url(wave.png);
+    background-size: 1000px 100px;
+}
+#wave1{
+    z-index: 20;
+    opacity:1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+#wave2{
+    z-index: 19;
+    opacity:0.5;
+    bottom: 10px;
+    animation: animateWave_2 4s linear infinite;
+}
+#wave3{
+    z-index: 20;
+    opacity:0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+#wave4{
+    z-index: 19;
+    opacity:0.7;
+    bottom: 20px;
+    animation: animateWave_2 3s linear infinite;
+}
+@keyframes animateWave{
+    0%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px ;
+    }
+}
+@keyframes animateWave_2{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px ;
+    }
+}
+#palm-tree{
+    position:absolute;
+    top:1800px;
+    margin-left: -70px;
+    width:30%;
+}
+#logo-footer{
+    width:10%;
+}
+#binoculaires{
+    position: absolute;
+    transform: scale(30%) rotate(20deg);
+    right:20px;
+    bottom: 20px;
+}
+
